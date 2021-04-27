@@ -2,9 +2,13 @@ const userName = 'Ich';
 let testVar: string = 'Test';
 
 
-const button = document.querySelector('#test-button')! as HTMLButtonElement;
+const button = document.querySelector('#test-button')!;
 
-button.addEventListener('click', () => {
-    console.log('Button clicked');
-}); 
+function clickHandler(message: string) {
+    console.log();
+}
+
+if(button) {
+    button.addEventListener('click', clickHandler.bind(null, ''));
+}
 
